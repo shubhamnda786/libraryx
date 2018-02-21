@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Registration</title>
+		<link rel="stylesheet" href="libr.css">
+	</head>
+	<body bgcolor="#42f4b9">
+		<form action="save.php" method="post" enctype="multipart/form-data">
+			<div id="style">
+				<h1>My Library</h1>
+				
+				<a href="view.php"><input type="button" value="ViewLibrary" class="butt"></input></a>
+				<h2>Register Book</h2>
+				<?php 
+					if($message!='') {
+						echo $message;
+					}
+				?>
+				BookName:
+				<input type="text" name="bookname"></input><br>
+				BookImage:
+				<input type="file" name="filename" accept="image/gif, image/jpeg, image/png"></input><br>
+				BookType: 
+				<input type="text" name="booktype"></input><br>
+				<input type="hidden" name="id" value="id"/>
+				<input type="submit" name="submit" value="SUBMIT"></input>
+			</div>
+		</form>
+	</body>
+</html>
